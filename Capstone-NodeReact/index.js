@@ -18,7 +18,7 @@ app.get("/", (req, res)=>{
     res.send("Welcome to the Capstone Project")
 })
 
-app.listen(4000, (e)=>{
+app.listen(3000, (e)=>{
     console.log("Connected")
 
     mongoose.connect("mongodb://localhost/capstone").then((result)=>{

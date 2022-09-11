@@ -34,6 +34,7 @@ class UserService {
     
     async loginUser(email, password){
         const result = await User.find({"email":email});
+        //console.log(result)
         if(result){
             if(result.length > 0){
                 const user = result[0];
@@ -45,7 +46,7 @@ class UserService {
                     
 
                     const objUser = user.toObject();
-
+                    //console.log(objUser)
                     objUser.token =  user.generateToken();
                     return objUser;
                 }
